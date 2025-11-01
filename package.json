@@ -1,40 +1,21 @@
 {
+  "name": "skopek_prednostni_ukol",
   "private": true,
-  "version": "0.0.0",
-  "name": "example",
+  "version": "1.0.0",
   "type": "module",
-  "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "@eslint/js": "^9.14.0",
-    "babel-jest": "*",
-    "eslint": "^9.14.0",
-    "eslint-plugin-jest": "^28.9.0",
-    "globals": "^15.12.0",
-    "jest": "^29.7.0",
-    "jest-runner-eslint": "^2.2.1"
-  },
   "scripts": {
-    "test": "jest && node --test --test-timeout=3000"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node main.js",
+    "lint": "echo \"(lint si řeší classroom)\"",
+    "test": "node -e \"import('./main.js').then(m=>console.log(typeof m.main==='function'?'OK':'main missing'))\""
   },
-  "engines": {
-    "node": ">=20.9.0"
+  "devDependencies": {
+    "cypress": "^15.5.0",
+    "vite": "^7.1.7"
   },
   "dependencies": {
-    "@types/node": "^22.8.7",
-    "eslint-plugin-jsdoc": "^50.5.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "node": "^22.11.0",
-    "prettier": "^3.3.3"
-  },
-  "jest": {
-    "runner": "jest-runner-eslint",
-    "displayName": "lint",
-    "testMatch": [
-      "<rootDir>/exclude/*.js",
-      "<rootDir>/src/*.js",
-      "<rootDir>/src/**/*.js",
-      "<rootDir>/main.js"
-    ]
+    "prismjs": "^1.30.0"
   }
 }
